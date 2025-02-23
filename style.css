@@ -1,0 +1,267 @@
+/* Global Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #4bb8b2, #2d3b5d);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar */
+header {
+    background-color: rgba(45, 59, 93, 0.9);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #4bb8b2;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+/* Hero/Home Section */
+#home{
+  margin: 100px auto;
+  height: 144px;
+}
+.home-section {
+    text-align: center;
+    padding: 120px 20px; /* Increased top padding */
+    background: linear-gradient(135deg, #2d3b5d, #4bb8b2);
+    color: white;
+ min-height: 46vh;  /*Ensures it takes full screen height */
+
+}
+.home-section img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin-top: 20px;
+    border: 4px solid white;
+}
+
+.home-section h1 {
+    font-size: 2.8rem;
+    margin-top: 15px;
+}
+
+.home-section p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* About, Education, Projects, Contact Section */
+section {
+    padding: 20px;
+    margin: 30px auto;
+    width: 80%;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Section Titles */
+section h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: white;
+}
+/* Contact Section */
+#contact {
+    max-width: 650px;
+    margin: 60px auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #4bb8b2, #2d3b5d);
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: white;
+}
+
+#contact h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+#contact p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+/* Labels */
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: white;
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 95%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+input::placeholder, textarea::placeholder {
+    color: #666;
+    opacity: 0.8;
+    font-size: 15px;
+}
+
+input:focus,
+textarea:focus {
+    background: #fff;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+/* Textarea */
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: white;
+    color: #2d3b5d;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    #contact {
+        width: 90%;
+        padding: 30px;
+    }
+
+    input, textarea {
+        font-size: 16px;
+        padding: 13px;
+    }
+
+    button {
+        font-size: 17px;
+        padding: 14px;
+    }
+}
+
+
+/* Footer */
+footer {
+    background-color: rgba(45, 59, 93, 0.9);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        background: rgba(45, 59, 93, 0.9);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-links a {
+        display: block;
+        padding: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    section {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .home-section h1 {
+        font-size: 2.2rem;
+    }
+
+    .home-section img {
+        width: 130px;
+        height: 130px;
+    }
+}
